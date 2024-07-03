@@ -1,0 +1,24 @@
+
+<div class="lista-produtos">
+  <h2 class="lista-produtos__title">Listagem de Produtos</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Valor</th>
+        <th>Descricao</th>
+        <th>Disponivel</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let produto of produtos">
+        <td>{{ produto.nome }}</td>
+        <td>{{ produto.valor | currency:'BRL' }}</td>
+        <td>{{ produto.descricao }}</td>
+        <td>{{ produto.disponivel }}</td>
+
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-primary" (click)="onNovoProduto()">Novo Produto</button>
+</div>
